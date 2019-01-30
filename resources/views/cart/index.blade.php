@@ -58,7 +58,7 @@
                     Cijena prije poreza: {{Cart::subtotal()}} kn<br>
                     Ukupna cijena: {{Cart::total()}} kn
                 </td>
-                <td>Items: {{Cart::count()}}
+                <td>Broj: {{Cart::count()}}
                         <td></td>
                 </td>
                 
@@ -72,7 +72,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                <td><a href="{{url('/checkout')}}" class="button">Završi</a></td>
+                <td><a href="{{route('checkout.shipping')}}" class="button">Završi</a></td>
                     
                 </tr>
 </tr>

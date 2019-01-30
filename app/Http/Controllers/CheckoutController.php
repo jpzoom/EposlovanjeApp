@@ -9,6 +9,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CheckoutController extends Controller
 {
+    /*
     public function step1() {
         if(Auth::check()) {
             return redirect()->route('checkout.shipping');
@@ -16,7 +17,7 @@ class CheckoutController extends Controller
 
         return redirect('login');
     }
-
+*/
     public function shipping() {
         return view('front.shipping-info');
     }
@@ -26,9 +27,12 @@ class CheckoutController extends Controller
     }
 
     public function storePayment(Request $request) {
+
+
+                           //dd(request->all());
         // Set your secret key: remember to change this to your live secret key in production
     // See your keys here: https://dashboard.stripe.com/account/apikeys
-        \Stripe\Stripe::setApiKey("sk_test_nHSX76dcktQVsjODMj2TF6NZ");
+    \Stripe\Stripe::setApiKey("sk_test_nHSX76dcktQVsjODMj2TF6NZ");
     // Get the credit card details submitted by the form
             $token = $request->stripeToken;
     // Create a charge: this will charge the user's card
@@ -42,9 +46,25 @@ class CheckoutController extends Controller
             } catch (\Stripe\Error\Card $e) {
                 // The card has been declined
             }
-          //Create the order
-           Order::createOrder();
-            //redirect user to some page
-            return "Narudžba dovršena";
+          
+
+            //Create the order
+          $user=Auth::user();
+          $order=$user->orders()->create([
+              'total' => Cart::total(),
+              'delivered'=> 0
+          ]);
+
+          $cartItems = Cart::content();
+          foreach ($cartItems as $cartItem) {
+              $order -> orderItems() -> attach($cartItem -> id, [
+                  'qty' => $cartItem -> qty,
+                  'total' => $cartItem -> qty*$cartItem -> price
+              ]);
+          }
+
+            return "<h1>Narudžba dovršena</h1>";
+            
+            
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h3>Products</h3>
+    <h3>Proizvodi</h3>
 
 <ul class="container">
     @forelse($products as $product)
@@ -11,14 +11,7 @@
 
        <div class="col-md-8">
         <h4>Ime proizvoda: {{$product->name}}</h4>
-      <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary btn-sm ">Edit Product</a>
-      <br>
 
-        <form action="{{route('product.destroy',$product->id)}}"  method="POST">
-           {{csrf_field()}}
-           {{method_field('DELETE')}}
-           <input class="btn btn-sm btn-danger" type="submit" value="Delete">
-         </form>
 
          <div class="col-md-4">
             

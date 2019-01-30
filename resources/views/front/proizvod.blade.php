@@ -18,7 +18,7 @@
             <div class="small-6 columns">
                 <div class="item-wrapper">
                     <h3 class="subheader">
-                       <span class="price-tag">$20</span> Mc-Mykey Designed Shirt
+                       <span class="price-tag">Cijena</span>
                     </h3>
                     <div class="row">
                         <div class="large-12 columns">
@@ -40,7 +40,7 @@
                             <a href="#" class="button  expanded">Add to Cart</a>
                         </div>
                     </div>
-                <p class="text-left subheader"><small>* Designed by <a href="https://www.youtube.com/webdevmatics">Webdevmatics</a></small></p>
+                <p class="text-left subheader"><small></a></small></p>
 
                 </div>
             </div>

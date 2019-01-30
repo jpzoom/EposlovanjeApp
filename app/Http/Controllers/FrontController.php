@@ -23,4 +23,8 @@ class FrontController extends Controller
         return view('front.proizvod');
     }
 
+    public function oNama() {
+        return view('front.onama');
+    }
+
 }

@@ -11,7 +11,7 @@
                         <div class="item-wrapper">
                             <div class="img-wrapper">
                             <a href="{{route('cart.addItem', $proizvod->id)}}" class="button expanded add-to-cart">
-                                    Add to Cart
+                                    Dodaj u košaricu
                                 </a>
                                 <a href="#">
                                     <img src="{{url('images', $proizvod->image)}}"/>

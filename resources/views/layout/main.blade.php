@@ -22,22 +22,22 @@
                     <a href="{{route('front')}}">
                         <i class="fa fa-home fa-lg" aria-hidden="true">
                         </i>
-                       Veleshop - vaše mjesto za kupnju
+                       Veleshop - web shop za vas
                     </a>
                 </h4>
             </div>
             <div class="top-bar-right">
                 <ol class="menu">
                     <li>
-                        <a href="route{{('proizvodi')}}">
-                            SHIRTS
-                        </a>
+                        <a href="{{route('oNama')}}">
+                                O nama
+                    </a>
                     </li>
                     <li>
-                        <a href="#">
-                            Kontakt
+                            <a href="{{url('/home')}}">
+                                    Vaš profil
                         </a>
-                    </li>
+                        </li>
                     <li>
                     <a href="{{route('cart.index')}}">
                             <i class="fa fa-shopping-cart fa-2x" aria-hidden="true">
@@ -46,7 +46,7 @@
                             <span class="alert badge">
                                 {{Cart::count()}}
                             </span>
-                        </a>
+                    </a>
                     </li>
                 </ol>
             </div>
@@ -68,6 +68,9 @@
                 <br>
                 <a href="https://www.veleri.hr/?q=node/149">Internet tehnologije i E-poslovanje</a>
                 <br>
+                <br>
+                <a href="https://zakon.hr/z/199/Zakon-o-elektroničkoj-trgovini">Zakon o elektroničkoj trgovini</a>
+                <br>
 
             </ul>
             
@@ -85,11 +88,12 @@
           </div>
           
           <div class="small-6 medium-4 large-4 columns">
-            <h4>Follow Us</h4>
+            <h4>Linkovi</h4>
             <ul class="footer-links">
               <li><a href="https://dashboard.stripe.com/test/dashboard">Stripe</a></li>
               <li><a href="https://trello.com/b/rnNzY8Sl/internet-tehnologije-i-e-poslovanje">Trello</a></li>
-              <li><a href="https://twitter.com/webdevmatics">Github</a></li>
+              <li><a href="https://github.com/jpzoom/EposlovanjeApp">Github</a></li>
+              <li><a href="https://www.facebook.com/Veleshop-1134881163347460/">Facebook</a></li>
             <ul>
           </div>
         </div>

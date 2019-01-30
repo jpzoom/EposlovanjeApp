@@ -26,18 +26,7 @@
                         <li><a href="{{route('category.index')}}">Dodaj kategoriju</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
-                    <a href="#">
-                        <i class="glyphicon glyphicon-list"></i> Narudžbe
-                        <span class="caret pull-right"></span>
-                    </a>
-                    <!-- Sub menu -->
-                    <ul>
-                        <li><a href="{{url('admin/orders/pending')}}">Zaprimljenje</a></li>
-                        <li><a href="{{url('admin/orders/delivered')}}">Dovršene</a></li>
-                        <li><a href="{{url('admin/orders')}}">Sve</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </div>
     </div> <!-- ADMIN SIDE NAV-->
